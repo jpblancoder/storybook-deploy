@@ -12,11 +12,10 @@
   "scripts": {
     "build": "run-s svg:build plugins:build",
     "sb:build": "storybook build -o ./docs",
-    "sb:clean": "rimraf ./stories/dist",
+    "sb:clean": "rimraf ./stories/docs",
     "sb:preview": "npm run sb:build && npm run sb:serve",
-    "sb:serve": "npx http-server ./stories/dist",
-    "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "sb:serve": "npx http-server ./stories/docs",
+    "sb": "storybook dev -p 6006"
   },
   "devDependencies": {
     "@babel/preset-env": "7.21.5",
@@ -30,7 +29,8 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rimraf": "5.0.0",
     "storybook": "7.0.11"
   },
-  "browserslist": "> 1%, last 4 versions, not IE 11, not dead"
+  "dependencies": {}
 }
