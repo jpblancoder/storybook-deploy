@@ -18,15 +18,6 @@
     "sb": "NODE_ENV=storybook storybook dev -s ./ -p 6006"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "7.0.10",
-    "@storybook/addon-interactions": "7.0.10",
-    "@storybook/addon-links": "7.0.10",
-    "@storybook/blocks": "7.0.10",
-    "@storybook/builder-vite": "7.0.10",
-    "@storybook/preset-scss": "1.0.3",
-    "@storybook/react": "7.0.10",
-    "@storybook/react-webpack5": "7.0.10",
-    "@storybook/testing-library": "^0.1.0"
   },
   "dependencies": {
   },
