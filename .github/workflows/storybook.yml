@@ -42,7 +42,7 @@ jobs:
         run: npm run sb:build && touch './docs/.nojekyll'
 
       - name: 📦 Package Storybook
-        uses: upload-github-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
           path: docs
 
