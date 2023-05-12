@@ -1,4 +1,4 @@
-name: 📕 Build Storybook and deploy 🚀 # https://github.com/marketplace/actions/deploy-to-github-pages
+name: 📕 Build Storybook and deploy 🚀
 
 # Cancel any in-progress workflows for the same branch
 concurrency:
@@ -9,7 +9,7 @@ concurrency:
 on:
   push:
     branches: # For these Git branches
-      - dev
+      - main
   workflow_dispatch: # See GitHub Actions tab, to manually trigger.
 
 permissions:

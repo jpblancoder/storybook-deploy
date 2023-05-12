@@ -11,11 +11,11 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "run-s svg:build plugins:build",
-    "sb:build": "storybook build -o ./docs",
-    "sb:clean": "rimraf ./stories/docs",
+    "sb:build": "storybook build --docs -o ./docs",
+    "sb:clean": "rimraf ./docs",
     "sb:preview": "npm run sb:build && npm run sb:serve",
-    "sb:serve": "npx http-server ./stories/docs",
-    "sb": "storybook dev -p 6006"
+    "sb:serve": "npx http-server ./docs",
+    "sb": "storybook dev --docs -p 6006"
   },
   "devDependencies": {
     "@babel/preset-env": "7.21.5",
