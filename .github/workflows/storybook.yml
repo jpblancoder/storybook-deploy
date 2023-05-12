@@ -13,9 +13,9 @@ on:
   workflow_dispatch: # See GitHub Actions tab, to manually trigger.
 
 permissions:
-  pages: write      # to deploy to Pages
-  id-token: write   # to verify the deployment originates from an appropriate source
-  contents: write   # to upload the artifact
+  contents: write # to upload the pages artifact
+  id-token: write # to verify the deployment originates from an appropriate source
+  pages: write # to deploy to GitHub Pages
 
 jobs:
   build-and-deploy:
