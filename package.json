@@ -15,11 +15,22 @@
     "sb:clean": "rimraf ./stories/dist",
     "sb:preview": "npm run sb:build && npm run sb:serve",
     "sb:serve": "npx http-server ./stories/dist",
-    "sb": "NODE_ENV=storybook storybook dev -s ./ -p 6006"
+    "sb": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
-  },
-  "dependencies": {
+    "@babel/preset-env": "7.21.5",
+    "@babel/preset-react": "7.18.6",
+    "@storybook/addon-essentials": "7.0.11",
+    "@storybook/addon-interactions": "7.0.11",
+    "@storybook/addon-links": "7.0.11",
+    "@storybook/blocks": "7.0.11",
+    "@storybook/react": "7.0.11",
+    "@storybook/react-webpack5": "7.0.11",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.0.11"
   },
   "browserslist": "> 1%, last 4 versions, not IE 11, not dead"
 }
