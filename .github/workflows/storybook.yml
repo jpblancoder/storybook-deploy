@@ -13,7 +13,9 @@ on:
   workflow_dispatch: # See GitHub Actions tab, to manually trigger.
 
 permissions:
-  contents: write
+  pages: write      # to deploy to Pages
+  id-token: write   # to verify the deployment originates from an appropriate source
+  contents: write   # to upload the artifact
 
 jobs:
   build-and-deploy:
@@ -39,9 +41,11 @@ jobs:
       - name: 📕 Build Storybook
         run: npm run sb:build && touch './docs/.nojekyll'
 
-      - name: 🚀 Deploy Storybook
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 📦 Package Storybook
+        uses: upload-github-pages-artifact@v1.0.8
         with:
-          branch: storybook # This is the branch you wish to deploy to
-          clean-exclude: .nojekyll # Automatically remove deleted files from the deploy branch, except those listed here
-          folder: docs # The folder that the build-storybook script generates files
+          path: docs
+
+      - name: 🚀 Deploy Storybook
+        uses: actions/deploy-pages@v2.0.1
+

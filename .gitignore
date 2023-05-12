@@ -1,7 +1,6 @@
 **/.DS_Store
 /.git
 /dist
-!/docs/.nojekyll
 /docs
 /node_modules
 npm-debug.log
